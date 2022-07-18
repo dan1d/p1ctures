@@ -4,13 +4,14 @@ services:
   dan1d-pictures-prod:
     environment:
       VIRTUAL_HOST: pics.dan1d.dev
+      VIRTUAL_PORT: 3010
       LETSENCRYPT_HOST: pics.dan1d.dev
       LETSENCRYPT_EMAIL: danielfromarg@gmail.com 
     build:
       context: .
       dockerfile: Dockerfile
     expose:
-      - 80
+      - 3010
     container_name: dan1d-pictures-nodejs-server
     volumes:
       - .:/usr/src/app/p1cture-react

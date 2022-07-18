@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  dan1d-pictures-prod:
+    environment:
+      VIRTUAL_HOST: pics.dan1d.dev
+      LETSENCRYPT_HOST: pics.dan1d.dev
+      LETSENCRYPT_EMAIL: danielfromarg@gmail.com 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 80
+    container_name: dan1d-pictures-nodejs-server
+    volumes:
+      - .:/usr/src/app/dan1d-pictures
+      - ./build:/usr/src/app/dan1d-pictures/build
+      - /usr/src/app/dan1d-pictures/node_modules
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

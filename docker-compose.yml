@@ -13,9 +13,9 @@ services:
       - 80
     container_name: dan1d-pictures-nodejs-server
     volumes:
-      - .:/usr/src/app/dan1d-pictures
-      - ./build:/usr/src/app/dan1d-pictures/build
-      - /usr/src/app/dan1d-pictures/node_modules
+      - .:/usr/src/app/p1cture-react
+      - ./build:/usr/src/app/p1cture-react/build
+      - /usr/src/app/p1cture-react/node_modules
 
 networks:
   default:

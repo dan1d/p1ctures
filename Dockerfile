@@ -1,6 +1,6 @@
 FROM node:16.15
 
-WORKDIR /usr/src/app/portfolio-react-prod
+WORKDIR /usr/src/app/p1cture-react
 
 COPY package*.json ./
 
